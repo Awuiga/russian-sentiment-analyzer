@@ -1,0 +1,32 @@
+{
+  "run_date": "2026-11-08",
+  "split": "validation",
+  "cleaned_rows": 86933,
+  "train_rows": 55636,
+  "validation_rows": 13910,
+  "test_rows_not_evaluated": 17387,
+  "accuracy": 0.7388209920920201,
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "confusion_matrix": [
+    [
+      3301,
+      1217,
+      106
+    ],
+    [
+      1121,
+      2985,
+      493
+    ],
+    [
+      97,
+      599,
+      3991
+    ]
+  ],
+  "dataset_sha256": "db226708d966a1506560136ef85b33ea326eaf6119465d4b1edb5bf9395330fd"
+}
