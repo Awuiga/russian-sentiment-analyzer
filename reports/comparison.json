@@ -1,0 +1,208 @@
+{
+  "evaluation_date": "2026-11-12",
+  "method": "intersection of v1 test and v2 validation; reconstructed splits, seed 42",
+  "limitations": [
+    "Assumes checkpoints were trained by the supplied scripts on this corpus.",
+    "Checkpoints do not store training indices or dataset hashes.",
+    "Exact v2 training vocabulary and v1 TF-IDF vocabulary/IDF matched.",
+    "Training sizes and tokenization differ; this is a comparison of saved systems.",
+    "V2 validation may already have been inspected during development.",
+    "No claim of an untouched final benchmark or causal architecture improvement."
+  ],
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.14.1+cpu",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1"
+  },
+  "hashes": {
+    "dataset": "db226708d966a1506560136ef85b33ea326eaf6119465d4b1edb5bf9395330fd",
+    "v1_checkpoint": "e6d7e52530ad9935d0fb1853932f3d678f4595c186a71e9814bfff246acf315d",
+    "v2_checkpoint": "25cae178062bd593567cb9fd0dd5c345121b8f2693b92ba9d7a9b90ba7485957",
+    "common_positions_int64_le": "730a0cf7677c934936a0f5033909f2ea4dcb33bea26a6062ccfebd7e3db1669d"
+  },
+  "split_sizes": {
+    "cleaned": 86933,
+    "v1_train": 55636,
+    "v1_val": 13910,
+    "v1_test": 17387,
+    "v2_train": 69547,
+    "v2_val": 17386,
+    "common": 3452
+  },
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "v2_vocabulary_size": 128632,
+  "v2_parameters": 4116323,
+  "common_v1": {
+    "samples": 3452,
+    "accuracy": 0.7392815758980301,
+    "classification_report": {
+      "negative": {
+        "precision": 0.7259658580413297,
+        "recall": 0.7069116360454943,
+        "f1-score": 0.7163120567375887,
+        "support": 1143.0
+      },
+      "neutral": {
+        "precision": 0.6237113402061856,
+        "recall": 0.6436170212765957,
+        "f1-score": 0.6335078534031413,
+        "support": 1128.0
+      },
+      "positive": {
+        "precision": 0.8663829787234043,
+        "recall": 0.8619813717188823,
+        "f1-score": 0.8641765704584041,
+        "support": 1181.0
+      },
+      "accuracy": 0.7392815758980301,
+      "macro avg": {
+        "precision": 0.7386867256569731,
+        "recall": 0.7375033430136574,
+        "f1-score": 0.7379988268663781,
+        "support": 3452.0
+      },
+      "weighted avg": {
+        "precision": 0.7405920235707294,
+        "recall": 0.7392815758980301,
+        "f1-score": 0.7398418508694039,
+        "support": 3452.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        808,
+        304,
+        31
+      ],
+      [
+        276,
+        726,
+        126
+      ],
+      [
+        29,
+        134,
+        1018
+      ]
+    ]
+  },
+  "common_v2": {
+    "samples": 3452,
+    "accuracy": 0.7022016222479722,
+    "classification_report": {
+      "negative": {
+        "precision": 0.6949152542372882,
+        "recall": 0.6815398075240595,
+        "f1-score": 0.6881625441696113,
+        "support": 1143.0
+      },
+      "neutral": {
+        "precision": 0.5867026055705301,
+        "recall": 0.5789007092198581,
+        "f1-score": 0.5827755466309683,
+        "support": 1128.0
+      },
+      "positive": {
+        "precision": 0.8144499178981938,
+        "recall": 0.8399661303979679,
+        "f1-score": 0.8270112546894539,
+        "support": 1181.0
+      },
+      "accuracy": 0.7022016222479722,
+      "macro avg": {
+        "precision": 0.6986892592353374,
+        "recall": 0.7001355490472951,
+        "f1-score": 0.699316448496678,
+        "support": 3452.0
+      },
+      "weighted avg": {
+        "precision": 0.70045018184083,
+        "recall": 0.7022016222479722,
+        "f1-score": 0.7012285331326312,
+        "support": 3452.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        779,
+        316,
+        48
+      ],
+      [
+        297,
+        653,
+        178
+      ],
+      [
+        45,
+        144,
+        992
+      ]
+    ]
+  },
+  "v2_native_validation": {
+    "samples": 17386,
+    "accuracy": 0.6993558035200736,
+    "classification_report": {
+      "negative": {
+        "precision": 0.6849003844809507,
+        "recall": 0.6839441535776615,
+        "f1-score": 0.6844219350331819,
+        "support": 5730.0
+      },
+      "neutral": {
+        "precision": 0.5899807994414383,
+        "recall": 0.5837651122625216,
+        "f1-score": 0.5868564979598924,
+        "support": 5790.0
+      },
+      "positive": {
+        "precision": 0.818871103622578,
+        "recall": 0.8285032390044323,
+        "f1-score": 0.82365901194814,
+        "support": 5866.0
+      },
+      "accuracy": 0.6993558035200736,
+      "macro avg": {
+        "precision": 0.6979174291816556,
+        "recall": 0.6987375016148718,
+        "f1-score": 0.6983124816470715,
+        "support": 17386.0
+      },
+      "weighted avg": {
+        "precision": 0.6984910805068342,
+        "recall": 0.6993558035200736,
+        "f1-score": 0.6989083501101861,
+        "support": 17386.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        3919,
+        1574,
+        237
+      ],
+      [
+        1572,
+        3380,
+        838
+      ],
+      [
+        231,
+        775,
+        4860
+      ]
+    ]
+  },
+  "paired_counts": {
+    "both_correct": 2203,
+    "only_v1_correct": 349,
+    "only_v2_correct": 221,
+    "both_wrong": 679
+  }
+}
